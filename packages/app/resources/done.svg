@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 54 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>done</title>
+    <desc>Created with Sketch.</desc>
+    <g id="done" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g>
+            <g id="Base-State" fill="#FFFFFF">
+                <circle id="Oval" cx="27" cy="27" r="22"></circle>
+            </g>
+            <circle id="Oval" fill="#2F275A" cx="27" cy="27" r="15"></circle>
+        </g>
+    </g>
+</svg>

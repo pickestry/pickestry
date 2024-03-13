@@ -1,0 +1,19 @@
+{
+  "name": "@pickestry/defs",
+  "version": "0.0.2",
+  "description": "Definitions",
+  "main": "./src/index.mjs",
+  "author": "Pickestry <dev@pickestry.com>",
+  "directories": {
+    "lib": "src"
+  },
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "src/**/*.mjs",
+    "!src/**/*.test.mjs"
+  ],
+  "dependencies": {
+    "@pickestry/utils": "file:../utils"
+  }
+}

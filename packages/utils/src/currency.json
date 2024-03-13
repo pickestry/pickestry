@@ -1,0 +1,19 @@
+{
+    "collection": [
+        {
+            "code": "USD",
+            "num": 840,
+            "d": 2,
+            "name": "United States dollar",
+            "locations": ["US", "AS", "IO", "VG", "BQ", "EC", "SV", "GU", "MH", "FM", "MP", "PW", "PA", "PR", "TL", "TC", "VI", "UM"],
+            "symbol": "$"
+        }, {
+            "code": "CAD",
+            "num": 124,
+            "d": 2,
+            "name": "Canadian dollar",
+            "locations": ["CA"],
+            "symbol": "$"
+        }
+    ]
+}

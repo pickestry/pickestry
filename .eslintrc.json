@@ -1,0 +1,50 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "node": true,
+    "es2022": true
+  },
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "sourceType": "module"
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ],
+  "overrides": [],
+  "plugins": [
+    "react",
+    "react-hooks",
+    "simple-import-sort"
+  ],
+  "rules": {
+    "quotes": [
+      "warn",
+      "single"
+    ],
+    "semi": [
+      "warn",
+      "never"
+    ],
+    "no-console": "warn",
+    "react/react-in-jsx-scope": "off",
+    "react/prop-types": "off"
+  },
+  "settings": {
+    "react": {
+      "version": "18.2"
+    }
+  },
+  "ignorePatterns": ["packages/**/dist/*.js"],
+  "globals": {
+    "assert": true,
+    "__DEV__": "readonly",
+    "__PROD__":  "readonly",
+    "LOG_DISABLED": "readonly"
+  }
+}

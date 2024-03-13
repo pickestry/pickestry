@@ -1,0 +1,7 @@
+[main]
+foo="bar"
+crash_url=""
+
+[ui.windows]
+minWidth=1000
+minHeight=500

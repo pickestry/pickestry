@@ -1,0 +1,25 @@
+{
+  "name": "@pickestry/persist",
+  "version": "0.0.2",
+  "description": "Pickestry persistence layer",
+  "main": "src/index.mjs",
+  "scripts": {
+    "test": "node --test"
+  },
+  "author": "Pickestry <dev@pickestry.com>",
+  "private": true,
+  "sideEffects": false,
+  "files": [
+    "src",
+    "!src/**/*.test.mjs"
+  ],
+  "dependencies": {
+    "@pickestry/defs": "file:../defs",
+    "@pickestry/utils": "file:../utils",
+    "sequelize": "^6.37.1",
+    "umzug": "^3.7.0"
+  },
+  "devDependencies": {
+    "sqlite3": "^5.1.7"
+  }
+}

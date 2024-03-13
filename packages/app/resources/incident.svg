@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 54 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>incident</title>
+    <g id="incident" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g>
+            <g id="Base-State" fill="#FFFFFF">
+                <circle id="Oval" cx="27" cy="27" r="22"></circle>
+            </g>
+            <line x1="27" y1="21" x2="27" y2="26" id="Path" stroke="#664d03" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></line>
+            <line x1="26.55" y1="31" x2="27.5" y2="31" id="Path" stroke="#664d03" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></line>
+            <path d="M25.0359913,15.1700087 L15.3078313,32.3541439 C14.8996869,33.1020301 14.8972501,34.0229092 15.3014299,34.7732021 C15.7056098,35.5234949 16.4556991,35.9905084 17.27184,36 L36.72816,36 C37.5443009,35.9905084 38.2943902,35.5234949 38.6985701,34.7732021 C39.1027499,34.0229092 39.1003131,33.1020301 38.6921687,32.3541439 L28.9640087,15.1700087 C28.5475864,14.4436099 27.8029306,14 27,14 C26.1970694,14 25.4524136,14.4436099 25.0359913,15.1700087 Z" id="Path" stroke="#664d03" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+        </g>
+    </g>
+</svg>

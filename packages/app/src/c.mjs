@@ -1,0 +1,53 @@
+// Part of Pickestry. See LICENSE file for full copyright and licensing details.
+
+// Scanners
+export const SCANNER_GET_ALL = 'get-scanners'
+export const SCANNER_GET_ALL_DONE = 'get-scanners-done'
+export const SCANNER_GET_ALL_ERR = 'get-scanners-err'
+export const SCANNER_START = 'start-scanner'
+export const SCANNER_START_FAILED = 'start-scanner-failed'
+export const SCANNER_STOP = 'stop-scanner'
+export const SCANNER_STOP_FAILED = 'stop-scanner-failed'
+export const SCANNER_AUTOSTART_ON = 'autostart-scanner-on'
+export const SCANNER_AUTOSTART_OFF = 'autostart-scanner-off'
+export const SCANNER_USE = 'use-scanner'
+
+// Application
+export const SYS_INFO = 'sysinfo'
+export const DATA_EVENT = 'data'
+export const APP_GET_STATE = 'get-app-state'
+export const APP_UPDATE_STATE = 'update-app-state'
+
+// Dialogs
+export const DIALOG_SHOW = 'show-dialog'
+export const DLG_PRODUCT_CREATE = 'product-create'
+export const DLG_PRODUCT_UPDATE = 'product-update'
+export const DLG_NEW_VARIANT = 'variant-create'
+export const DLG_PKG_CREATE = 'package-create'
+export const DLG_PKG_UPDATE = 'package-update'
+export const DLG_CUSTOMER_CREATE = 'customer-create'
+export const DLG_CUSTOMER_UPDATE = 'customer-update'
+export const DLG_LOCATION_CREATE = 'location-create'
+export const DLG_LOCATION_UPDATE = 'location-update'
+export const DLG_SUPPLIER_CREATE = 'supplier-create'
+export const DLG_SUPPLIER_UPDATE = 'supplier-update'
+export const DLG_PIPELINE_CREATE = 'pipeline-create'
+export const DLG_PIPELINE_UPDATE = 'pipeline-update'
+export const DLG_CHANGE_PART_QTY = 'change-part-qty'
+export const DLG_JOB_CREATE = 'job-create'
+export const DLG_JOB_ASSIGN = 'job-assign'
+export const DLG_ADD_PART = 'add-part'
+export const DLG_SET_INCIDENT = 'set-incident'
+export const DLG_ADD_JOB_NOTE = 'add-job-note'
+export const DLG_ACTIVATE_DEVICE = 'activate-device'
+export const DLG_NEW_TX = 'inventory-tx-new'
+export const DLG_ADD_LCN = 'add-license'
+export const DLG_EXPORT_BARCODES = 'export-barcodes'
+
+// Events
+export const EV_P_C = 'product.created'
+export const EV_P_U = 'product.updated'
+export const EV_PACK_CREATED = 'package.created'
+export const EV_PACK_UPDATED = 'package.updated'
+export const EV_PACK_D = 'package.deleted'
+export const EV_SYSER = 'system_error'

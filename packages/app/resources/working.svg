@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg  viewBox="0 0 54 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>working</title>
+    <defs>
+        <circle id="path-1" cx="15.0566948" cy="15.2798271" r="15"></circle>
+    </defs>
+    <g id="working" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g>
+            <g id="Base-State" fill="#FFFFFF">
+                <circle id="Oval" cx="27" cy="27" r="22"></circle>
+            </g>
+            <g id="Path" transform="translate(11.943305, 11.720173)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Mask" fill="currentColor" xlink:href="#path-1"></use>
+                <path d="M15.0566948,0.296388462 L15.0566948,16.1841498 L4.47957586,27 C2.03443582,24.1008699 0.560142127,21.907832 0.0566947723,20.4208861 C-1.80416888,14.9247734 -0.816128562,10.1494243 0.0566947723,7.94584361 C0.965548506,5.65129845 1.9795854,1.98962282 7.02834739,0.296388462 C8.20667988,-0.0987961539 10.8827957,-0.0987961539 15.0566948,0.296388462 Z" fill="#FFFFFF" mask="url(#mask-2)"></path>
+            </g>
+        </g>
+    </g>
+</svg>

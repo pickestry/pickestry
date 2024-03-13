@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 250 250" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Logo-Icon" stroke="currentColor" stroke-width="1" fill="none" fill-rule="evenodd">
+
+        <g id="Arrow-Left" transform="translate(137.000000, 135.000000)" fill="#FFFFFF">
+            <rect id="Stem" x="42.8620677" y="20.9016393" width="31.3432836" height="41.8032787" rx="10"></rect>
+            <path d="M25.7974679,9.37997947 L-26.7528072,71.7855625 L78.347743,71.7855625 L25.7974679,9.37997947 Z" id="Point" stroke="#FFFFFF" stroke-width="10" stroke-linejoin="round" transform="translate(25.797468, 41.964018) rotate(270.000000) translate(-25.797468, -41.964018) "></path>
+        </g>
+        <rect id="Bar-fat" fill="#FFFFFF" x="38" y="21" width="60" height="208" rx="20"></rect>
+        <g id="Arrow-Left-Copy" transform="translate(164.500000, 72.500000) scale(1, -1) rotate(180.000000) translate(-164.500000, -72.500000) translate(127.000000, 30.000000)" fill="#FFFFFF">
+            <rect id="Stem" x="42.8401899" y="21.4736842" width="31.3291139" height="42.0526316" rx="10"></rect>
+            <path d="M25.7515823,9.54491432 L-26.9961895,72.6582278 L78.499354,72.6582278 L25.7515823,9.54491432 Z" id="Point" stroke="#FFFFFF" stroke-width="10" stroke-linejoin="round" transform="translate(25.751582, 42.500000) rotate(270.000000) translate(-25.751582, -42.500000) "></path>
+        </g>
+    </g>
+</svg>

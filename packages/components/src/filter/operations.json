@@ -1,0 +1,50 @@
+{
+  "operations": [
+    {
+      "value": "includes",
+      "text": "contains substring"
+    }, {
+      "value": "eq",
+      "text": "is equal to"
+    }, {
+      "value": "neq",
+      "text": "not equal to",
+      "short": "not"
+    },
+    {
+      "value": "gt",
+      "text": "is greater than",
+      "short": ">"
+    }, {
+      "value": "gte",
+      "text": "is greater or equal to",
+      "short": "=>"
+    }, {
+      "value": "lt",
+      "text": "is less than",
+      "short": "<"
+    }, {
+      "value": "lte",
+      "text": "is less or equal to",
+      "short": "=<"
+    }, {
+      "value": "has",
+      "text": "value exists",
+      "short": "exists"
+    }, {
+      "value": "hasnot",
+      "text": "value does not exist",
+      "short": "absent"
+    }, {
+      "value": "between",
+      "text": "within range"
+    }, {
+      "value": "in",
+      "text": "value in a set of values"
+    }, {
+      "value": "nin",
+      "text": "value not in a set of values",
+      "short": "not"
+    }
+  ]
+}

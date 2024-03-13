@@ -1,0 +1,16 @@
+{
+  "name": "@pickestry/core",
+  "version": "0.0.2",
+  "description": "Core stuff",
+  "main": "src/index.mjs",
+  "author": "Pickestry <dev@pickestry.com>",
+  "sideEffects": false,
+  "directories": {
+    "lib": "src"
+  },
+  "files": [
+    ".dist",
+    "src/**/*.mjs",
+    "!src/**/*.test.mjs"
+  ]
+}

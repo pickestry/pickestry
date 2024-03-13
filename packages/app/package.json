@@ -1,0 +1,44 @@
+{
+  "name": "@pickestry/app",
+  "version": "0.0.2",
+  "description": "Pickestry desktop application",
+  "main": ".webpack/main",
+  "homepage": "https://pickestry.com",
+  "author": "Pickestry <dev@pickestry.com>",
+  "private": true,
+  "scripts": {
+    "start": "electronmon --trace-warnings .",
+    "debug": "electron --inspect-brk .",
+    "build": "node ./scripts/build.cjs",
+    "clean": "npx rimraf .webpack ; npx rimraf dist",
+    "pack:win": "./scripts/install-sqlite3.sh && ./scripts/pack.cjs --platform=windows",
+    "pack:linux": "./scripts/install-sqlite3-linux.sh &&./scripts/pack.cjs --platform=linux",
+    "watch": "node ./scripts/watch.cjs"
+  },
+  "devDependencies": {
+    "@pickestry/components": "file:../components",
+    "@pickestry/comviews": "file:../comviews",
+    "@pickestry/control": "file:../control",
+    "@pickestry/core": "file:../core",
+    "@pickestry/defs": "file:../defs",
+    "@pickestry/utils": "file:../utils",
+    "electron": "^29.1.1",
+    "electron-builder": "^24.13.3",
+    "electron-squirrel-startup": "^1.0.0",
+    "electronmon": "^2.0.2",
+    "file-loader": "^6.2.0",
+    "raw-loader": "^4.0.2",
+    "smol-toml": "^1.1.4",
+    "style-loader": "^3.3.4"
+  },
+  "dependencies": {
+    "7zip-bin": "^5.2.0",
+    "node-machine-id": "^1.1.12",
+    "react-dnd": "^16.0.1",
+    "react-dnd-html5-backend": "^16.0.1",
+    "sequelize": "6.37.1",
+    "sqlite3": "^5.1.6",
+    "umzug": "^3.7.0",
+    "usb": "^2.11.0"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "name": "@pickestry/kitchensink",
+  "version": "0.0.2",
+  "description": "Components testing grounds",
+  "author": "Pickestry <dev@pickestry.com>",
+  "private": true,
+  "directories": {
+    "lib": "src"
+  },
+  "keywords": [
+    "pickestry",
+    "e2e",
+    "test",
+    "testing",
+    "unit-testing",
+    "react"
+  ],
+  "files": [
+    "dist",
+    "index.d.ts",
+    "src/**/*.d.ts"
+  ],
+  "scripts": {
+    "clean": "npx rimraf dist",
+    "visual": "parcel --port 3234 --host 127.0.0.1 --watch-for-stdin src/index.html",
+    "server": "node src/server.mjs",
+    "test:ui": "npx playwright test test/functional",
+    "test:ui:update": "npx playwright test test/functional -u"
+  },
+  "devDependencies": {
+    "@fastify/static": "^7.0.1",
+    "fastify": "^4.26.1"
+  }
+}

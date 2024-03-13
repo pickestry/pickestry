@@ -1,0 +1,83 @@
+/* Part of Pickestry. See LICENSE file for full copyright and licensing details. */
+
+:root {
+  --color-primary: #313661;
+  --color-primary-light: #8386A0;
+  --color-primary-lighter: #D6D7DF;
+  --color-primary-invert: white;
+  --color-secondary: #1B7AFF;
+  --color-hightlight: #FFEEBA;
+  --color-info: #055160;
+  --color-info-light: #b6effb;
+  --color-info-lighter: #cff4fc;
+  --color-danger: #842029;
+  --color-danger-light: #f5c2c7; 
+  --color-danger-lighter: #f8d7da;
+  --color-success: #0f5132;
+  --color-success-light: #badbcc;
+  --color-success-lighter: #d1e7dd;
+  --color-warn: #664d03;
+  --color-warn-light: #ffecb5;
+  --color-warn-lighter: #fff3cd;
+
+  /* color contrasts */
+  --color-bg: white;
+  --color-contrast-lower: hsl(0, 0%, 95%);
+  --color-contrast-low: hsl(240, 1%, 83%);
+  --color-contrast-medium: hsl(240, 1%, 48%);
+  --color-contrast-high: hsl(240, 4%, 20%);
+  --color-contrast-higher: black;
+
+  --p: 4px;
+  --p-m: 8px;
+  --p-l: 16px;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  position: absolute;
+  opacity: 0;
+  z-index: 1;
+  background: rgba(222, 222, 222, .75);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: opacity 0.5s 0.5s ease-out;
+  transition: opacity 0.5s 0.5s ease-out;
+}
+
+::-webkit-scrollbar-thumb {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  background: rgba(150, 150, 150, .5);
+  border-radius: 4px;
+}
+
+body {
+  background: #eeeeee; 
+  font-size: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  margin: auto;
+  height: 100%;
+  overflow: hidden;
+}
+
+.dialog-overlay {
+  background: rgba(0, 0, 0, 0.8);
+  display: grid;
+  place-items: start;
+  z-index: 1000;
+}
+
+#root {
+  margin-top: 40px;
+  overflow: auto;
+  height: calc(100vh - 40px);
+}

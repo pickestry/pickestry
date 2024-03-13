@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Security-Policy" content="font-src 'self' data:; connect-src * data:; default-src * pickestry://*; img-src blob: data: * pickestry://*; script-src 'self' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src blob: data: mediastream: * pickestry://*;" />
+    <title>Barcode Station | Pickestry</title>
+    <style>
+      html {
+        height: 100%;
+      }
+
+      body {
+          overflow: hidden;
+          height: 100%;
+      }
+
+      .loading-page {
+          height: 100%;
+      }
+
+      .loading-content {
+          top: 28vh;
+          left: 24vw;
+          position: absolute;
+      }
+
+      .color-weak {
+          color: #696f7d;
+      }
+
+      .loading-img {
+          width: 10em;
+          background: #2F275A;
+          border-radius: 8px;
+      }
+
+      .ellipsis-loader {
+          display: inline-block;
+          font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
+          letter-spacing: -.2em;
+          pointer-events: none;
+          text-align: left;
+          vertical-align: baseline;
+          white-space: pre;
+          width: 1.3em;
+      }
+
+      .ellipsis-loader:before {
+          animation: anime-ellipsis-loading 1s step-start infinite;
+          content: " ";
+      }
+
+      @keyframes anime-ellipsis-loading {
+          0% {
+            content: " ";
+          }
+          25% {
+            content: ".";
+          }
+          50% {
+            content: "..";
+          }
+          75% {
+            content: "...";
+          }
+        }
+    </Style>
+  </head>
+  <body>
+    <div class="loading-page">
+      <div class="loading-content">
+        <img class="loading-img" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB2aWV3Qm94PSIwIDAgMjUwIDI1MCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KICAgIDxnIGlkPSJMb2dvLUljb24iIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CgogICAgICAgIDxnIGlkPSJBcnJvdy1MZWZ0IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMzcuMDAwMDAwLCAxMzUuMDAwMDAwKSIgZmlsbD0iI0ZGRkZGRiI+CiAgICAgICAgICAgIDxyZWN0IGlkPSJTdGVtIiB4PSI0Mi44NjIwNjc3IiB5PSIyMC45MDE2MzkzIiB3aWR0aD0iMzEuMzQzMjgzNiIgaGVpZ2h0PSI0MS44MDMyNzg3IiByeD0iMTAiPjwvcmVjdD4KICAgICAgICAgICAgPHBhdGggZD0iTTI1Ljc5NzQ2NzksOS4zNzk5Nzk0NyBMLTI2Ljc1MjgwNzIsNzEuNzg1NTYyNSBMNzguMzQ3NzQzLDcxLjc4NTU2MjUgTDI1Ljc5NzQ2NzksOS4zNzk5Nzk0NyBaIiBpZD0iUG9pbnQiIHN0cm9rZT0iI0ZGRkZGRiIgc3Ryb2tlLXdpZHRoPSIxMCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjUuNzk3NDY4LCA0MS45NjQwMTgpIHJvdGF0ZSgyNzAuMDAwMDAwKSB0cmFuc2xhdGUoLTI1Ljc5NzQ2OCwgLTQxLjk2NDAxOCkgIj48L3BhdGg+CiAgICAgICAgPC9nPgogICAgICAgIDxyZWN0IGlkPSJCYXItZmF0IiBmaWxsPSIjRkZGRkZGIiB4PSIzOCIgeT0iMjEiIHdpZHRoPSI2MCIgaGVpZ2h0PSIyMDgiIHJ4PSIyMCI+PC9yZWN0PgogICAgICAgIDxnIGlkPSJBcnJvdy1MZWZ0LUNvcHkiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE2NC41MDAwMDAsIDcyLjUwMDAwMCkgc2NhbGUoMSwgLTEpIHJvdGF0ZSgxODAuMDAwMDAwKSB0cmFuc2xhdGUoLTE2NC41MDAwMDAsIC03Mi41MDAwMDApIHRyYW5zbGF0ZSgxMjcuMDAwMDAwLCAzMC4wMDAwMDApIiBmaWxsPSIjRkZGRkZGIj4KICAgICAgICAgICAgPHJlY3QgaWQ9IlN0ZW0iIHg9IjQyLjg0MDE4OTkiIHk9IjIxLjQ3MzY4NDIiIHdpZHRoPSIzMS4zMjkxMTM5IiBoZWlnaHQ9IjQyLjA1MjYzMTYiIHJ4PSIxMCI+PC9yZWN0PgogICAgICAgICAgICA8cGF0aCBkPSJNMjUuNzUxNTgyMyw5LjU0NDkxNDMyIEwtMjYuOTk2MTg5NSw3Mi42NTgyMjc4IEw3OC40OTkzNTQsNzIuNjU4MjI3OCBMMjUuNzUxNTgyMyw5LjU0NDkxNDMyIFoiIGlkPSJQb2ludCIgc3Ryb2tlPSIjRkZGRkZGIiBzdHJva2Utd2lkdGg9IjEwIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyNS43NTE1ODIsIDQyLjUwMDAwMCkgcm90YXRlKDI3MC4wMDAwMDApIHRyYW5zbGF0ZSgtMjUuNzUxNTgyLCAtNDIuNTAwMDAwKSAiPjwvcGF0aD4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPgo=">
+        <p class="color-weak" style="text-align: center;">Loading pickestry<span class="ellipsis-loader"><span class="sr-only"></span></span></p>
+      </div>
+    </div>
+  </body>
+</html>

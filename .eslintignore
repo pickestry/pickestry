@@ -1,0 +1,6 @@
+node_modules
+dist
+jest.config.ts
+*.d.ts
+**packages/**/scripts/*.js
+*.min.js

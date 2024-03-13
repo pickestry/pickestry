@@ -1,0 +1,66 @@
+{
+  "items": [
+    {
+      "name": "name",
+      "label": "Name",
+      "path": "name",
+      "type": "string",
+      "hint": "Filter by product's name",
+      "ops": ["includes"]
+    }, {
+      "name": "sku",
+      "label": "SKU",
+      "path": "sku",
+      "type": "string",
+      "hint": "Filter by product's sku",
+      "ops": ["eq"],
+      "place_after": "name"
+    }, {
+      "name": "price",
+      "label": "Price",
+      "path": "price.value",
+      "type": "money",
+      "hint": "Filter by price",
+      "ops": ["gt", "lt", "between"],
+      "place_after": "sku"
+    }, {
+      "name": "cost",
+      "label": "Cost",
+      "path": "cost.value",
+      "type": "money",
+      "hint": "Filter by cost",
+      "ops": ["has", "gt", "lt", "between"],
+      "place_after": "price"
+    }, {
+      "name": "created",
+      "label": "Created",
+      "path": "created",
+      "type": "date",
+      "hint": "Filter by creation date",
+      "ops": ["eq", "gt", "gte", "lt", "lte", "between"],
+      "place_after": "cost"
+    }, {
+      "name": "status",
+      "label": "Status",
+      "path": "status",
+      "type": "enum",
+      "enum_items": [
+        "pending",
+        "preparing",
+        "canceled",
+        "ready",
+        "delivered",
+        "complete"
+      ],
+      "hint": "Order status",
+      "ops": ["in", "nin"]
+    }, {
+      "name": "age",
+      "label": "Age",
+      "path": "age",
+      "type": "number",
+      "hint": "How old they are",
+      "ops": ["gte", "lte", "between"]
+    }
+  ]
+}

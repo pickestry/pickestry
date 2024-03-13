@@ -1,0 +1,7 @@
+[main]
+title = "Pickestry"
+
+[ui.windows]
+minWidth=1300
+minHeight=900
+

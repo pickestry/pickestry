@@ -1,0 +1,27 @@
+{
+  "name": "@pickestry/components",
+  "version": "0.0.2",
+  "description": "React components: Input, Dates, Layout, Buttons, etc.",
+  "main": "src/index.mjs",
+  "author": "Pickestry <dev@pickestry.com>",
+  "publishConfig": {
+    "access": "public"
+  },
+  "directories": {
+    "lib": "src"
+  },
+  "files": [
+    "dist",
+    "index.d.ts",
+    "src/**/*.d.ts"
+  ],
+  "sideEffects": false,
+  "keywords": [
+    "pickestry",
+    "react"
+  ],
+  "dependencies": {
+    "@pickestry/utils": "file:../utils",
+    "currency.js": "^2.0.4"
+  }
+}

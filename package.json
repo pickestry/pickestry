@@ -1,0 +1,72 @@
+{
+  "name": "@pickestry/root",
+  "version": "0.0.0",
+  "description": "Simple Manufacturing and Inventory Management System",
+  "private": true,
+  "author": "Pickestry <dev@pickestry.com>",
+  "scripts": {
+    "clean": "npx rimraf .parcel-cache ; npm run clean -ws --if-present",
+    "lint": "eslint . --ext .js,.mjs,.jsx",
+    "build": "npm run build -ws --if-present",
+    "test": "npm run test -ws --if-present",
+    "test:ui": "npm run test:ui -ws --if-present",
+    "test:all": "npm run test && npm run test:ui",
+    "pack": "npm run pack -ws --if-present",
+    "watch": "npm run watch -w @pickestry/app",
+    "start": "npm start -w @pickestry/app"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "@babel/preset-env": "^7.23.9",
+    "@babel/preset-react": "^7.23.3",
+    "@floating-ui/react": "^0.26.9",
+    "@parcel/transformer-svg-react": "^2.11.0",
+    "@pickestry/app": "^0.0.1",
+    "@playwright/test": "^1.41.2",
+    "@svgr/webpack": "^8.1.0",
+    "7zip-bin": "^5.2.0",
+    "ajv": "^8.12.0",
+    "ansi-colors": "^4.1.3",
+    "babel-loader": "^9.1.3",
+    "babel-plugin-styled-components": "^2.1.4",
+    "case-anything": "^2.1.13",
+    "classnames": "^2.5.1",
+    "clsx": "^2.1.0",
+    "copy-webpack-plugin": "^12.0.2",
+    "css-loader": "^6.10.0",
+    "debug": "^4.3.4",
+    "delay": "^6.0.0",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-simple-import-sort": "^12.0.0",
+    "husky": "^9.0.11",
+    "immer": "^10.0.3",
+    "lodash-es": "4.17.21",
+    "parcel": "^2.11.0",
+    "react": "18.2.0",
+    "react-day-picker": "^8.10.0",
+    "react-dom": "18.2.0",
+    "react-router-dom": "6.19.0"
+  },
+  "engines": {
+    "node": ">=20.9.0",
+    "npm": ">=10.1.0"
+  },
+  "browserslist": [
+    "Chrome >= 73",
+    "Firefox >= 78",
+    "Edge >= 79",
+    "Safari >= 12.0",
+    "iOS >= 12.0",
+    "Opera >= 53"
+  ],
+  "keywords": [
+    "pickestry",
+    "desktop",
+    "manufacturing",
+    "inventory"
+  ]
+}
