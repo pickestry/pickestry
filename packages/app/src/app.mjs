@@ -111,7 +111,6 @@ export class App {
       dataDir
     })
 
-
     // init trigger handler
     this.#triggerHandler = createTriggerHandler(this.#control)
 

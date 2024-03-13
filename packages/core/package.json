@@ -3,6 +3,7 @@
   "version": "0.0.2",
   "description": "Core stuff",
   "main": "src/index.mjs",
+  "private": true,
   "author": "Pickestry <dev@pickestry.com>",
   "sideEffects": false,
   "directories": {
