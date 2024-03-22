@@ -38,7 +38,7 @@ export default (sequelize, DataTypes, { enums }) => {
     },
     options: DataTypes.JSON,
     variant: DataTypes.JSON,
-    productPicture: DataTypes.BLOB,
+    productPicture: DataTypes.TEXT,
     isVariant: {
       type: DataTypes.VIRTUAL,
       get() {
