@@ -1,7 +1,7 @@
 Pickestry
 ----
 
-Pickestry is an open source dekstop application for small manufacturing companies.
+Pickestry is an open source desktop application for independent manufacturers and small businesses.
 
 It offers functionality like:
 
