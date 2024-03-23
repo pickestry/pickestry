@@ -31,6 +31,6 @@ describe('PDFControl', () => {
 
     const blob = new Blob([content], { type })
 
-    assert.ok(await utils.checkFile(blob, name, true))
+    assert.ok(await utils.checkFile(blob, name))
   })
 })
