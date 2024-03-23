@@ -1,5 +1,7 @@
 // Part of Pickestry. See LICENSE file for full copyright and licensing details.
 
+import path from 'node:path'
+import fs from 'node:fs'
 import Debug from 'debug'
 import { app as electronApp } from 'electron'
 import { app } from './app.mjs'
@@ -13,6 +15,20 @@ try {
   electronApp.quit()
 }
 
+// setup directories
+const appData = path.join(electronApp.getPath('appData'), 'pickestry')
+
+if(!fs.existsSync(appData)) {
+  fs.mkdirSync(appData)
+}
+
+electronApp.setPath('appData', appData)
+electronApp.setPath('userData', path.join(appData, 'root'))
+electronApp.setPath('logs', path.join(appData, 'logs'))
+electronApp.setPath('crashDumps', path.join(appData, 'crash'))
+electronApp.setPath('sessionData', path.join(appData, 'sess'))
+
+// start listening to events
 electronApp.on('ready', async () => {
   await app.init()
 

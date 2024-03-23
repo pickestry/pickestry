@@ -45,17 +45,6 @@ export class App {
   #settings
 
   constructor() {
-    const appData = path.join(electronApp.getPath('appData'), 'pickestry')
-
-    if(!fs.existsSync(appData)) {
-      fs.mkdirSync(appData)
-    }
-    electronApp.setPath('appData', appData)
-    electronApp.setPath('userData', path.join(appData, 'root'))
-    electronApp.setPath('logs', path.join(appData, 'logs'))
-    electronApp.setPath('crashDumps', path.join(appData, 'crash'))
-    electronApp.setPath('sessionData', path.join(appData, 'sess'))
-
     // Machine id
     this.#machineId = machineIdSync()
 
@@ -123,7 +112,6 @@ export class App {
   }
 
   async onMainReady() {
-    log('Post main window ready')
     // 1. Init data
     this.#settings = await this.settings()
 
