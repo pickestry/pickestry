@@ -58,7 +58,7 @@ export class Control extends EventEmitter {
         dataLogging
       })
     } catch(err) {
-      log('Failed to initialize persit: ', err)
+      log('Failed to initialize persist: ', err)
       throw new Error('failed to initialize persist: ', err)
     }
 

@@ -1,6 +1,8 @@
 [main]
 foo="bar"
 crash_url=""
+autoUpdates=true
+autoUpdateCheck=1800000
 
 [ui.windows]
 minWidth=1000

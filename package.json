@@ -68,5 +68,8 @@
     "desktop",
     "manufacturing",
     "inventory"
-  ]
+  ],
+  "dependencies": {
+    "electron-updater": "^6.1.8"
+  }
 }

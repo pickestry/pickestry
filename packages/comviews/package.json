@@ -1,6 +1,6 @@
 {
   "name": "@pickestry/comviews",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "React views, containers. components' big brother",
   "main": "src/index.mjs",
   "author": "Pickestry <dev@pickestry.com>",

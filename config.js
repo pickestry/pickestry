@@ -8,5 +8,6 @@ console.log(`Production: ${isProduction ? 'yes' : 'no'}`)
 
 module.exports = {
     isProduction,
-    rootPath: __dirname
+    rootPath: __dirname,
+    updateUrl: 'https://updates.pickestry.com/files'
 }

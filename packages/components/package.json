@@ -1,6 +1,6 @@
 {
   "name": "@pickestry/components",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "React components: Input, Dates, Layout, Buttons, etc.",
   "main": "src/index.mjs",
   "author": "Pickestry <dev@pickestry.com>",

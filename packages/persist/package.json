@@ -1,6 +1,6 @@
 {
   "name": "@pickestry/persist",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "Pickestry persistence layer",
   "main": "src/index.mjs",
   "scripts": {

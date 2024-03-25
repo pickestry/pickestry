@@ -1,6 +1,6 @@
 {
   "name": "@pickestry/kitchensink",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "Components testing grounds",
   "author": "Pickestry <dev@pickestry.com>",
   "private": true,

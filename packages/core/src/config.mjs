@@ -48,6 +48,12 @@ export class Config {
     return get(this.#tree, propPath)
   }
 
+  getBoolean(propPath) {
+    const v = this.get(propPath)
+
+    return v === 'true'
+  }
+
   set(propPath, value) {
     set(this.#tree, propPath, value)
   }

@@ -1,5 +1,6 @@
 [main]
 title = "Pickestry"
+updateEnabled=false
 
 [ui.windows]
 minWidth=1300

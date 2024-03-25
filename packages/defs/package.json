@@ -1,6 +1,6 @@
 {
   "name": "@pickestry/defs",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "Definitions",
   "main": "./src/index.mjs",
   "author": "Pickestry <dev@pickestry.com>",

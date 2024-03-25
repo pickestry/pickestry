@@ -1,6 +1,6 @@
 {
   "name": "@pickestry/app",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "Pickestry desktop application",
   "main": ".webpack/main",
   "homepage": "https://pickestry.com",
@@ -16,15 +16,9 @@
     "watch": "node ./scripts/watch.cjs"
   },
   "devDependencies": {
-    "@pickestry/components": "file:../components",
-    "@pickestry/comviews": "file:../comviews",
-    "@pickestry/control": "file:../control",
-    "@pickestry/core": "file:../core",
-    "@pickestry/defs": "file:../defs",
-    "@pickestry/utils": "file:../utils",
-    "electron": "^29.1.1",
-    "electron-builder": "^24.13.3",
-    "electron-squirrel-startup": "^1.0.0",
+    "electron": "29.1.5",
+    "electron-builder": "24.13.3",
+    "electron-log": "^5.1.2",
     "electronmon": "^2.0.2",
     "file-loader": "^6.2.0",
     "raw-loader": "^4.0.2",

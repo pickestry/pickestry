@@ -25,6 +25,7 @@ import { protocols } from './protocols/index.mjs'
 import SEED_TOML from './pk.toml.txt'
 import * as c from './c.mjs'
 import pkgJSON from '../package.json'
+import { updater } from './updater.mjs'
 
 const { machineIdSync } = nodeMachineId
 
@@ -132,6 +133,12 @@ export class App {
         log(`Failed to start ${v}`)
       }
     }
+
+    // updater
+    await updater.init({
+      disabled: !config.get('main.autoUpdates'),
+      autoCheckEvery: config.get('main.autoUpdateCheck')
+    })
   }
 
   onPersist({ name, entity }) {
@@ -304,6 +311,7 @@ export class App {
       windowManager.off('main:ready', this.onMainReady)
 
       await this.#control.cleanup()
+      await updater.cleanup()
     } catch(error) {
       throw new Error('failed to cleanup', { cause: error })
     }

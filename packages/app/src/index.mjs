@@ -8,13 +8,6 @@ import { app } from './app.mjs'
 
 const log = Debug('pickestry:app')
 
-try {
-  await import('electron-squirrel-startup')
-} catch(error) {
-  console.log('electron squirrel failed: ', error) // eslint-disable-line no-console
-  electronApp.quit()
-}
-
 // setup directories
 const appData = path.join(electronApp.getPath('appData'), 'pickestry')
 

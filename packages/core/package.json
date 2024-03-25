@@ -1,6 +1,6 @@
 {
   "name": "@pickestry/core",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "Core stuff",
   "main": "src/index.mjs",
   "private": true,
