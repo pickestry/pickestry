@@ -70,6 +70,21 @@ const rendererConfig = {
       }, {
         from: './src/system.html',
         to: path.resolve('.webpack', 'main')
+      }, {
+        from: '../components/.dist/index.js',
+        to: path.resolve('.webpack', 'renderer', 'pickestry.js')
+      }, {
+        from: '../../node_modules/react/umd/react.production.min.js',
+        to: path.resolve('.webpack', 'renderer', 'react.production.min.js')
+      }, {
+        from: '../../node_modules/react-dom/umd/react-dom.production.min.js',
+        to: path.resolve('.webpack', 'renderer', 'react-dom.production.min.js')
+      }, {
+        from: './vendors/react-is.production.min.js',
+        to: path.resolve('.webpack', 'renderer', 'react-is.js')
+      }, {
+        from: './vendors/styled-components.min.js',
+        to: path.resolve('.webpack', 'renderer', 'styled.js')
       }]
     }),
     new webpack.DefinePlugin({
@@ -78,8 +93,14 @@ const rendererConfig = {
       __DEV__:  JSON.stringify(!isProduction)
     }),
   ],
-  externalsType: 'commonjs',
-  externals: { electron: 'electron' },
+  externalsType: 'window',
+  externals: {
+    electron: 'electron',
+    '@pickestry/components': 'Pickestry',
+    'react': 'React',
+    'react-dom': 'ReactDOM',
+    'styled-components': 'styled'
+  },
   resolve: {
     extensions: ['.jsx', '.js', '.css'],
     alias: {

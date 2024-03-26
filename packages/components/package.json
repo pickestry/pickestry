@@ -3,12 +3,21 @@
   "version": "0.0.4",
   "description": "React components: Input, Dates, Layout, Buttons, etc.",
   "main": "src/index.mjs",
+  "import": {
+    ".": "./.dist/index.js",
+    "assets/*": "./.dist/assets/*"
+  },
   "author": "Pickestry <dev@pickestry.com>",
   "publishConfig": {
     "access": "public"
   },
   "directories": {
     "lib": "src"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "watch": "rollup -c -w",
+    "clean": "npx rimraf .dist"
   },
   "files": [
     "dist",

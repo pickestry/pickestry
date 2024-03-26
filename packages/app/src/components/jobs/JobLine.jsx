@@ -155,7 +155,7 @@ export const JobLine = ({ job }) => {
         <Name>{job.name}</Name>
         <Progress>
         {
-          jobReady && job.start && <>Start: {dates.display(job.start)} <span> • </span></>
+          jobReady && job.start && <>Starts on: {dates.display(job.start)} <span> • </span></>
         }
         {
           (job.status === 'created') ? `Planned Qty: ${job.plannedQty} items` : `Finished ${job.progressCounter} out of ${job.plannedQty} items`

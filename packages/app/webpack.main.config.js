@@ -33,7 +33,7 @@ const mainConfig = {
   plugins: [
     new webpack.ProgressPlugin(),
     new webpack.ProvidePlugin({
-      'createLogger': ['@pickestry-lite/core', 'createLogger']
+      'createLogger': ['@pickestry/core', 'createLogger']
     }),
     new webpack.DefinePlugin({
       LOG_DISABLED: JSON.stringify(process.env.LOG_DISABLED || false),

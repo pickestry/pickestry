@@ -2,9 +2,15 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="Content-Security-Policy" content="font-src 'self' data:; connect-src * data:; default-src * pickestry://*; img-src blob: data: * pickestry://* local: *; script-src 'self' 'unsafe-eval' 'unsafe-inline'; script-src-elem 'self' local://* ; style-src 'self' 'unsafe-inline'; media-src blob: data: mediastream: * pickestry://*;" />
+    <meta http-equiv="Content-Security-Policy" content="font-src 'self' data:; connect-src * data:; default-src * pickestry://*; img-src blob: data: * pickestry://* local: *; script-src 'self' 'unsafe-eval' 'unsafe-inline'; script-src-elem 'self' local://*; style-src 'self' 'unsafe-inline'; media-src blob: data: mediastream: * pickestry://*;" />
     <title>Pickestry</title>
-  <script defer src="local:///main/index.js"></script></head>
+
+    <script src="local:///react.production.min.js"></script></head>
+    <script src="local:///react-dom.production.min.js"></script></head>
+    <script src="local:///react-is.js"></script></head>
+    <script src="local:///styled.js"></script></head>
+    <script src="local:///pickestry.js"></script></head>
+    <script defer src="local:///main/index.js"></script></head>
   <body>
     <div id="root">-</div>
   </body>

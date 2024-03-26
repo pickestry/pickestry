@@ -4,7 +4,7 @@ import { get } from 'lodash-es'
 import { round } from 'lodash-es'
 import { isNil } from 'lodash-es'
 import { isArray } from 'lodash-es'
-import { displayAmount } from './index.mjs'
+import { displayAmount } from './Currency.mjs'
 
 export class OrderCalculator {
 

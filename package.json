@@ -7,12 +7,12 @@
   "scripts": {
     "clean": "npx rimraf .parcel-cache ; npm run clean -ws --if-present",
     "lint": "eslint . --ext .js,.mjs,.jsx",
-    "build": "npm run build -ws --if-present",
+    "build": "npm run build -w @picketry/components && npm run build -w @pickestry/app",
     "test": "npm run test -ws --if-present",
     "test:ui": "npm run test:ui -ws --if-present",
     "test:all": "npm run test && npm run test:ui",
     "pack": "npm run pack -ws --if-present",
-    "watch": "npm run watch -w @pickestry/app",
+    "watch": "npm run build -w @pickestry/components && npm run watch -w @pickestry/app",
     "start": "npm start -w @pickestry/app"
   },
   "workspaces": [
@@ -25,11 +25,17 @@
     "@parcel/transformer-svg-react": "^2.11.0",
     "@pickestry/app": "^0.0.1",
     "@playwright/test": "^1.41.2",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-replace": "^5.0.5",
     "@svgr/webpack": "^8.1.0",
     "7zip-bin": "^5.2.0",
     "ajv": "^8.12.0",
     "ansi-colors": "^4.1.3",
     "babel-loader": "^9.1.3",
+    "babel-plugin-annotate-pure-calls": "^0.4.0",
     "babel-plugin-styled-components": "^2.1.4",
     "case-anything": "^2.1.13",
     "classnames": "^2.5.1",
@@ -49,7 +55,10 @@
     "react": "18.2.0",
     "react-day-picker": "^8.10.0",
     "react-dom": "18.2.0",
-    "react-router-dom": "6.19.0"
+    "react-router-dom": "6.19.0",
+    "rollup": "^4.13.0",
+    "rollup-plugin-css-only": "^4.5.2",
+    "rollup-plugin-import-assets": "^1.1.1"
   },
   "engines": {
     "node": ">=20.9.0",

@@ -3,7 +3,7 @@
 import * as React from 'react'
 import styled from 'styled-components'
 import { css } from 'styled-components'
-import { SpinnerIcon } from './SpinnerIcon'
+import { SpinnerIcon } from './SpinnerIcon.jsx'
 
 export function Busy({
   testid = 'busy',
