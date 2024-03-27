@@ -9,8 +9,8 @@ import { Label } from '@pickestry/components'
 import { TextInput } from '@pickestry/components'
 import { reports } from '@pickestry/defs'
 import { schema } from '@pickestry/defs'
-import { ctrlInvoker } from '../../common/ctrlInvoker.mjs'
-import { usePage } from '../page/usePage.mjs'
+import { useControl } from '@pickestry/components'
+import { usePage } from '@pickestry/components'
 
 export const GenerateReport = () => {
 
@@ -25,6 +25,8 @@ export const GenerateReport = () => {
   const [query, setQueryState] = React.useState({})
 
   const [, setState] = React.useState('init') // init, fetching, done
+
+  const ctrlInvoker = useControl()
 
   const setQuery = React.useCallback((v) => {
     setError(undefined)

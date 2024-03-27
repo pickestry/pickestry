@@ -74,6 +74,9 @@ const rendererConfig = {
         from: '../components/.dist/index.js',
         to: path.resolve('.webpack', 'renderer', 'pickestry.js')
       }, {
+        from: '../components/.dist/assets/*',
+        to: `${path.resolve('.webpack', 'renderer', 'assets')}/[name][ext]`
+      }, {
         from: '../../node_modules/react/umd/react.production.min.js',
         to: path.resolve('.webpack', 'renderer', 'react.production.min.js')
       }, {

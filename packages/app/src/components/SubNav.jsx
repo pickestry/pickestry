@@ -1,7 +1,7 @@
 // Part of Pickestry. See LICENSE file for full copyright and licensing details.
 
 import * as React from 'react'
-import { Link } from './page/index.mjs'
+import { Link } from '@pickestry/components'
 import styled from 'styled-components'
 import { V } from '@pickestry/components'
 

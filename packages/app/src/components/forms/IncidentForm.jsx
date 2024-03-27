@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { Form } from '@pickestry/components'
 import { TextAreaField } from '@pickestry/components'
 import { DateField } from '@pickestry/components'
-import { ctrlInvoker } from '../../common/ctrlInvoker.mjs'
+import { useControl } from '@pickestry/components'
 
 export const IncidentForm = ({
     id,
@@ -11,6 +11,8 @@ export const IncidentForm = ({
   }) => {
 
   const [fetched, setFetched] = React.useState()
+
+  const ctrlInvoker = useControl()
 
   React.useEffect(() => {
     if(id) {

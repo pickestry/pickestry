@@ -5,6 +5,7 @@ import importAssets from 'rollup-plugin-import-assets'
 import replace from '@rollup/plugin-replace'
 import css from 'rollup-plugin-css-only'
 import json from '@rollup/plugin-json'
+import svgr from '@svgr/rollup'
 import config from '../../config.js'
 
 export default {
@@ -26,8 +27,9 @@ export default {
   ],
   plugins: [
     json(),
+    svgr(),
     importAssets({
-      include: [/\.gif$/i, /\.png$/i, /\.svg$/i],
+      include: [/\.gif$/i, /\.png$/i],
       fileNames: 'assets/[name].[ext]'
     }),
     replace({

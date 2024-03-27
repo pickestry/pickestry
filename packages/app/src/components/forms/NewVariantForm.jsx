@@ -1,8 +1,8 @@
 import * as React from 'react'
+import { get } from 'lodash-es'
 import { Form } from '@pickestry/components'
 import { SelectField } from '@pickestry/components'
-import { get } from 'lodash-es'
-import { ctrlInvoker } from '../../common/ctrlInvoker.mjs'
+import { useControl } from '@pickestry/components'
 
 export const NewVariantForm = ({
     id,
@@ -10,6 +10,8 @@ export const NewVariantForm = ({
   }) => {
 
   const [fetched, setFetched] = React.useState()
+
+  const ctrlInvoker = useControl()
 
   React.useEffect(() => {
     if(id) {

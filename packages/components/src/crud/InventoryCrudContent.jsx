@@ -1,13 +1,16 @@
 import * as React from 'react'
 import { CrudContent } from './index.mjs'
-import { appInvoker } from '../../common/appInvoker.mjs'
-import { ctrlInvoker } from '../../common/ctrlInvoker.mjs'
+import { useControl } from '../control/index.mjs'
 import { usePage } from '../page/usePage.mjs'
 import { schema } from '@pickestry/defs'
 
 export const InventoryCrudContent = () => {
 
   const { navigate } = usePage()
+
+  const appInvoker = useControl('app')
+
+  const ctrlInvoker = useControl()
 
   React.useEffect(() => {
   // init defs

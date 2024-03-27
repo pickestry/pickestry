@@ -1,19 +1,21 @@
 import * as React from 'react'
-import { Form } from '@pickestry/components'
-import { TextField } from '@pickestry/components'
-import { TextAreaField } from '@pickestry/components'
-import { Busy } from '@pickestry/components'
-import { appInvoker } from '../../common/appInvoker.mjs'
-import { DevOnly } from '../DevOnly.jsx'
 import { get } from 'lodash-es'
 import { produce } from 'immer'
-import { Alert } from '@pickestry/components'
+import { Form } from '../form/index.mjs'
+import { TextField } from '../form/index.mjs'
+import { TextAreaField } from '../form/index.mjs'
+import { Busy } from '../Busy.jsx'
+import { useControl } from '../control/index.mjs'
+import { DevOnly } from '../DevOnly.jsx'
+import { Alert } from '../Alert.jsx'
 
 export const AccountForm = () => {
 
   const [settings, setSettings] = React.useState()
 
   const [message, setMessage] = React.useState()
+
+  const appInvoker = useControl('app')
 
   const clearMessage = React.useCallback(() => {
     setMessage(undefined)

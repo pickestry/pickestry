@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Form } from '@pickestry/components'
 import { EntityField } from '@pickestry/components'
-import { ctrlInvoker } from '../../common/ctrlInvoker.mjs'
+import { useControl } from '@pickestry/components'
 
 export const JobAssignPipelineForm = ({
   id,
@@ -9,6 +9,8 @@ export const JobAssignPipelineForm = ({
 }) => {
 
   const [, setJob] = React.useState()
+
+  const ctrlInvoker = useControl()
 
   const onSearch = React.useCallback((v, limit) => {
     return ctrlInvoker.getCollection({

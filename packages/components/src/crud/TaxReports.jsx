@@ -1,11 +1,13 @@
 import * as React from 'react'
 import { CrudContent } from './index.mjs'
-import { ctrlInvoker } from '../../common/ctrlInvoker.mjs'
+import { useControl } from '../control/index.mjs'
 import { usePage } from '../page/usePage.mjs'
 
 export const TaxReports = ({ type = 'sales-tax' }) => {
 
   const { navigate } = usePage()
+
+  const ctrlInvoker = useControl()
 
   const q = {
     type: {

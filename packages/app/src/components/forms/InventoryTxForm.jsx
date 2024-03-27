@@ -1,11 +1,12 @@
 import * as React from 'react'
+import { isNil } from 'lodash-es'
 import { Form } from '@pickestry/components'
 import { EntityField } from '@pickestry/components'
 import { SelectField } from '@pickestry/components'
 import { NumberField } from '@pickestry/components'
-import { isNil } from 'lodash-es'
-import { ctrlInvoker } from '../../common/ctrlInvoker.mjs'
-import { DevOnly } from '../DevOnly.jsx'
+import { DevOnly } from '@pickestry/components'
+import { useControl } from '@pickestry/components'
+
 
 export const InventoryTxForm = ({
   id,
@@ -13,6 +14,8 @@ export const InventoryTxForm = ({
 }) => {
 
   const [init, setInit] = React.useState()
+
+  const ctrlInvoker = useControl()
 
   React.useEffect(() => {
     if(id) {

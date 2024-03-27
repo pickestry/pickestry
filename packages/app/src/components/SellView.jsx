@@ -1,22 +1,25 @@
 // Part of Pickestry. See LICENSE file for full copyright and licensing details.
 
 import * as React from 'react'
-import { FormProvider } from '@pickestry/components'
-import { Panel } from '@pickestry/components'
 import { get } from 'lodash-es'
 import { set } from 'lodash-es'
+import { FormProvider } from '@pickestry/components'
+import { DevOnly } from '@pickestry/components'
+import { Panel } from '@pickestry/components'
+import { useSettings } from '@pickestry/components'
+import { useControl } from '@pickestry/components'
+import { usePage } from '@pickestry/components'
 import { GoBack } from './GoBack.jsx'
-import { DevOnly } from './DevOnly.jsx'
-import { ctrlInvoker } from '../common/ctrlInvoker.mjs'
-import { usePage } from './page/usePage.mjs'
 import { SellForm } from './forms/SellForm.jsx'
-import { useSettings } from './settings/useSettings.mjs'
+
 
 export const SellView = () => {
 
   const [fetched, setFetched] = React.useState()
 
   const { meta } = usePage()
+
+  const ctrlInvoker = useControl()
 
   const {
     name,

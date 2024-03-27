@@ -19,7 +19,6 @@ import { IncidentForm } from '../forms/IncidentForm.jsx'
 import { JobNotesForm } from '../forms/JobNotesForm.jsx'
 import { ActivateDevice } from '../forms/ActivateDevice.jsx'
 import { InventoryTxForm } from '../forms/InventoryTxForm.jsx'
-import { AddLicense } from '../forms/AddLicense.jsx'
 import { ExportBarcodes } from '../forms/ExportBarcodes.jsx'
 import * as c from '../../c.mjs'
 
@@ -197,13 +196,6 @@ export const Dialogs = () => {
         <DialogHeader>Create New Inventory Transaction</DialogHeader>
         <DialogBody>
           <InventoryTxForm onSuccess={onSuccess} id={id} />
-        </DialogBody>
-      </DialogComponent>
-      { /* Add License */ }
-      <DialogComponent open={name === c.DLG_ADD_LCN} onOpenChange={(v) => { openChange(v)}} modal>
-        <DialogHeader>Add License</DialogHeader>
-        <DialogBody>
-          <AddLicense onSuccess={onSuccess} />
         </DialogBody>
       </DialogComponent>
       { /* Export Barcodes */ }

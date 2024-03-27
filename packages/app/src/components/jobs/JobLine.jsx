@@ -1,12 +1,14 @@
 import * as React from 'react'
 import styled from 'styled-components'
+import { useDrag } from 'react-dnd'
+import { get } from 'lodash-es'
 import { Frame } from '@pickestry/components'
 import { cssHover } from '@pickestry/components'
 import { cssNoSelect } from '@pickestry/components'
 import { ContextMenu } from '@pickestry/components'
 import { Muted } from '@pickestry/components'
-import { useDrag } from 'react-dnd'
-import { get } from 'lodash-es'
+import { useControl } from '@pickestry/components'
+import { usePage } from '@pickestry/components'
 import { utils } from '@pickestry/utils'
 import { dates } from '@pickestry/utils'
 import IncidentSVG from 'assets/incident.svg'
@@ -14,14 +16,15 @@ import CreatedSVG from 'assets/created.svg'
 import StartedSVG from 'assets/started.svg'
 import WorkingSVG from 'assets/working.svg'
 import DoneSVG from 'assets/done.svg'
-import { appInvoker } from '../../common/appInvoker.mjs'
-import { ctrlInvoker } from '../../common/ctrlInvoker.mjs'
-import { usePage } from '../page/usePage.mjs'
 import * as c from '../../c.mjs'
 
 export const JobLine = ({ job }) => {
 
   const { navigate } = usePage()
+
+  const appInvoker = useControl('app')
+
+  const ctrlInvoker = useControl()
 
   const statusDisplay = React.useCallback((status) => {
     switch(status) {

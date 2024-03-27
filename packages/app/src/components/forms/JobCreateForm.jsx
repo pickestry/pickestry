@@ -1,5 +1,6 @@
 import * as React from 'react'
 import styled from 'styled-components'
+import { get } from 'lodash-es'
 import { Label } from '@pickestry/components'
 import { Form } from '@pickestry/components'
 import { TextField } from '@pickestry/components'
@@ -8,8 +9,7 @@ import { NumberField } from '@pickestry/components'
 import { DateField } from '@pickestry/components'
 import { SwitchField } from '@pickestry/components'
 import { useForm } from '@pickestry/components'
-import { get } from 'lodash-es'
-import { ctrlInvoker } from '../../common/ctrlInvoker.mjs'
+import { useControl } from '@pickestry/components'
 
 
 export const JobCreateForm = ({ onSuccess }) => {
@@ -26,6 +26,8 @@ export const JobCreateForm = ({ onSuccess }) => {
   const [fromProduct, setFromProduct] = React.useState(false)
 
   const fromPackage = React.useMemo(() => !fromProduct, [fromProduct])
+
+  const ctrlInvoker = useControl()
 
   const onProductSearch = React.useCallback((v, limit = 5) => {
     return new Promise((resolve, reject) => {

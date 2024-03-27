@@ -2,7 +2,7 @@ import * as React from 'react'
 import styled from 'styled-components'
 import { Form } from '@pickestry/components'
 import { TextAreaField } from '@pickestry/components'
-import { ctrlInvoker } from '../../common/ctrlInvoker.mjs'
+import { useControl } from '@pickestry/components'
 
 export const JobNotesForm = ({
     id,
@@ -10,6 +10,8 @@ export const JobNotesForm = ({
   }) => {
 
   const [fetched, setFetched] = React.useState()
+
+  const ctrlInvoker = useControl()
 
   React.useEffect(() => {
     if(id) {

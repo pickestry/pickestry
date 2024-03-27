@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { Link as ReactRouterLink } from 'react-router-dom'
 import { pointer } from './core/index.mjs'
 
-export const Link = styled(ReactRouterLink)`
+export const RRLink = styled(ReactRouterLink)`
   background-color: transparent;
   border: none;
   text-decoration: none;

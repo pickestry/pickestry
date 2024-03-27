@@ -2,12 +2,14 @@ import * as React from 'react'
 import { Form } from '@pickestry/components'
 import { EntityField } from '@pickestry/components'
 import { NumberField } from '@pickestry/components'
-import { ctrlInvoker } from '../../common/ctrlInvoker.mjs'
+import { useControl } from '@pickestry/components'
 
 export const AddPartForm = ({
   id,
   onSuccess
 }) => {
+
+  const ctrlInvoker = useControl()
 
   const onSubmit = React.useCallback(({
       partId,

@@ -7,7 +7,7 @@ import { NumberField } from '@pickestry/components'
 import { TextField } from '@pickestry/components'
 import { Label } from '@pickestry/components'
 import { ValidInput } from '@pickestry/components'
-import { ctrlInvoker } from '../../common/ctrlInvoker.mjs'
+import { useControl } from '@pickestry/components'
 import { useOptSection } from 'hooks/useOptSection.jsx'
 import { useOnEvent } from 'hooks/useOnEvent.jsx'
 
@@ -17,6 +17,8 @@ export const PackageForm = ({
   }) => {
 
   const [fetched, setFetched] = React.useState()
+
+  const ctrlInvoker = useControl()
 
   const fetchPackage = React.useCallback((pkgId) => {
     return ctrlInvoker.getEntity({

@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { CrudContent } from './index.mjs'
-import { appInvoker } from '../../common/appInvoker.mjs'
+import { useControl } from '../control/index.mjs'
 import { usePage } from '../page/usePage.mjs'
 
 export const SalesTaxView = () => {
@@ -17,6 +17,8 @@ export const SalesTaxView = () => {
 
   setItem('query', q)
   setItem('order', [['createdAt', 'ASC']])
+
+  const appInvoker = useControl('app')
 
   const onExport = React.useCallback((format, query) => {
     appInvoker.exportCollection({

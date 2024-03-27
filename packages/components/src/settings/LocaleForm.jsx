@@ -1,13 +1,14 @@
 import * as React from 'react'
-import { Form } from '@pickestry/components'
-import { useForm } from '@pickestry/components'
-import { SelectField } from '@pickestry/components'
-import { Busy } from '@pickestry/components'
-import { appInvoker } from '../../common/appInvoker.mjs'
-import { DevOnly } from '../DevOnly.jsx'
 import { get } from 'lodash-es'
 import { produce } from 'immer'
-import { Alert } from '@pickestry/components'
+import { Form } from '../form/index.mjs'
+import { useForm } from '../form/index.mjs'
+import { SelectField } from '../form/index.mjs'
+import { Busy } from '../Busy.jsx'
+import { Alert } from '../Alert.jsx'
+import { DevOnly } from '../DevOnly.jsx'
+import { useControl } from '../control/index.mjs'
+
 
 export const LocaleForm = () => {
 
@@ -16,6 +17,8 @@ export const LocaleForm = () => {
   const [message, setMessage] = React.useState()
 
   const { getValue } = useForm()
+
+  const appInvoker = useControl('app')
 
   const clearMessage = React.useCallback(() => {
     setMessage(undefined)

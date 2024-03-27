@@ -7,7 +7,7 @@
   "scripts": {
     "clean": "npx rimraf .parcel-cache ; npm run clean -ws --if-present",
     "lint": "eslint . --ext .js,.mjs,.jsx",
-    "build": "npm run build -w @picketry/components && npm run build -w @pickestry/app",
+    "build": "npm run build -w @pickestry/components && npm run build -w @pickestry/app",
     "test": "npm run test -ws --if-present",
     "test:ui": "npm run test:ui -ws --if-present",
     "test:all": "npm run test && npm run test:ui",
@@ -30,6 +30,7 @@
     "@rollup/plugin-json": "^6.1.0",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-replace": "^5.0.5",
+    "@svgr/rollup": "^8.1.0",
     "@svgr/webpack": "^8.1.0",
     "7zip-bin": "^5.2.0",
     "ajv": "^8.12.0",

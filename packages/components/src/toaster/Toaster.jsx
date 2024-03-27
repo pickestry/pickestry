@@ -5,14 +5,14 @@ import styled from 'styled-components'
 import { head } from 'lodash-es'
 import { get } from 'lodash-es'
 import { capitalCase } from 'case-anything'
-import { cssEllipsis } from '@pickestry/components'
-import { cssNoSelect } from '@pickestry/components'
+import { cssEllipsis } from '../core/index.mjs'
+import { cssNoSelect } from '../core/index.mjs'
 
 const CLOSE_DELAY = 2000 // 2 sec
 
 let TMOUT
 
-export const Toaster = () => {
+export const Toaster = ({ windowIpc }) => {
 
   const [message, setMessage] = React.useState()
 

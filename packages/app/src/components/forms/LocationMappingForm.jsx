@@ -1,12 +1,14 @@
 import * as React from 'react'
 import { Form } from '@pickestry/components'
 import { EntityField } from '@pickestry/components'
-import { ctrlInvoker } from '../../common/ctrlInvoker.mjs'
+import { useControl } from '@pickestry/components'
 
 export const LocationMappingForm = ({
   onSuccess,
   onSubmit
 }) => {
+
+  const ctrlInvoker = useControl()
 
   const onLocationFromSearch = React.useCallback((v) => {
     return new Promise((resolve, reject) => {

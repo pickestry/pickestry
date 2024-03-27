@@ -1,4 +1,7 @@
 import * as React from 'react'
+import { isNil } from 'lodash-es'
+import { get } from 'lodash-es'
+import { produce } from 'immer'
 import { Form } from '@pickestry/components'
 import { TextField } from '@pickestry/components'
 import { SelectField } from '@pickestry/components'
@@ -8,15 +11,12 @@ import { ImageField } from '@pickestry/components'
 import { useForm } from '@pickestry/components'
 import { ValidInput } from '@pickestry/components'
 import { Label } from '@pickestry/components'
+import { DevOnly } from '@pickestry/components'
 import { ProductOptionsField } from './ProductOptionsField.jsx'
-import { isNil } from 'lodash-es'
-import { get } from 'lodash-es'
-import { produce } from 'immer'
-import { ctrlInvoker } from '../../common/ctrlInvoker.mjs'
-import { DevOnly } from '../DevOnly.jsx'
 import { useOptSection } from 'hooks/useOptSection.jsx'
 import { useOnEvent } from 'hooks/useOnEvent.jsx'
-import { useSettings } from '../settings/useSettings.mjs'
+import { useSettings } from '@pickestry/components'
+import { useControl } from '@pickestry/components'
 
 const PRODUCT_FORM_ID = 'product-form'
 
@@ -50,6 +50,8 @@ export const ProductForm = ({
     moneyDecimal,
     moneySeparator
   } = useSettings()
+
+  const ctrlInvoker = useControl()
 
   const fetchProduct = React.useCallback((productId) => {
     ctrlInvoker.getEntity({

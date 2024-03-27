@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Form } from '@pickestry/components'
 import { TextField } from '@pickestry/components'
-import { ctrlInvoker } from '../../common/ctrlInvoker.mjs'
+import { useControl } from '@pickestry/components'
 
 export const SupplierForm = ({
   id,
@@ -9,6 +9,8 @@ export const SupplierForm = ({
 }) => {
 
   const [fetched, setFetched] = React.useState()
+
+  const ctrlInvoker = useControl()
 
   React.useEffect(() => {
     if(id) {

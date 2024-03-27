@@ -2,8 +2,7 @@ import * as React from 'react'
 import { Form } from '@pickestry/components'
 import { TextField } from '@pickestry/components'
 import { EntityField } from '@pickestry/components'
-import { ctrlInvoker } from '../../common/ctrlInvoker.mjs'
-
+import { usControl } from '@pickestry/components'
 
 export const PipelineForm = ({
     id,
@@ -11,6 +10,8 @@ export const PipelineForm = ({
   }) => {
 
   const [fetched, setFetched] = React.useState()
+
+  const ctrlInvoker = useControl()
 
   React.useEffect(() => {
     if(id) {

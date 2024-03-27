@@ -5,9 +5,8 @@ import { Paginator } from '@pickestry/components'
 import { schema } from '@pickestry/defs'
 import { isEmpty } from 'lodash-es'
 import { isFunction } from 'lodash-es'
-import { ctrlInvoker } from '../../common/ctrlInvoker.mjs'
-import { appInvoker } from '../../common/appInvoker.mjs'
-import { usePageStore } from '../page/index.mjs'
+import { useControl } from '../control/index.mjs'
+import { usePageStore } from '../page/usePageStore.mjs'
 import { useSettings } from '../settings/useSettings.mjs'
 
 export const ListData = ({
@@ -34,6 +33,10 @@ export const ListData = ({
   const [state, setState] = React.useState('init') // init, fetching, done
 
   const [order] = usePageStore('order')
+
+  const appInvoker = useControl('app')
+
+  const ctrlInvoker = useControl()
 
   const {
     amount,

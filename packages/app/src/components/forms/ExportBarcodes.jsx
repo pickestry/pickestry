@@ -2,13 +2,15 @@ import * as React from 'react'
 import { Form } from '@pickestry/components'
 import { NumberField } from '@pickestry/components'
 import { ReadOnlyField } from '@pickestry/components'
-import { appInvoker } from '../../common/appInvoker.mjs'
+import { useControl } from '@pickestry/components'
 
 export const ExportBarcodes = ({
     barcode,
     barcodeCount,
     onSuccess
   }) => {
+
+  const appInvoker = useControl('app')
 
   const onSubmit = React.useCallback((o) => {
     return appInvoker.exportBarcodes(o)

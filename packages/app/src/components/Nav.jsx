@@ -2,12 +2,12 @@
 
 import styled from 'styled-components'
 import { H } from '@pickestry/components'
+import { Link } from '@pickestry/components'
 import PlayIcon from 'assets/play.svg'
 import BoxIcon from 'assets/box.svg'
 import FFIcon from 'assets/fast-forward.svg'
 import DollarIcon from 'assets/dollar-sign.svg'
 import CircleIcon from 'assets/circle.svg'
-import { Link } from './page/index.mjs'
 
 export const Nav = () => {
 

@@ -2,8 +2,8 @@ import * as React from 'react'
 import { Form } from '@pickestry/components'
 import { NumberField } from '@pickestry/components'
 import { Label } from '@pickestry/components'
+import { useControl } from '@pickestry/components'
 import { get } from 'lodash-es'
-import { ctrlInvoker } from '../../common/ctrlInvoker.mjs'
 
 export const ChangePartQtyForm = ({
     id,
@@ -12,6 +12,8 @@ export const ChangePartQtyForm = ({
   }) => {
 
   const [fetched, setFetched] = React.useState()
+
+  const ctrlInvoker = useControl()
 
   const onSubmit = React.useCallback(({ qty }) => {
     return ctrlInvoker.addPart({

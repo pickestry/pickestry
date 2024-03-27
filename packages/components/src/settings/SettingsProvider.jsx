@@ -2,8 +2,8 @@
 
 import * as React from 'react'
 import { get } from 'lodash-es'
-import { SettingsContext } from './SettingsContext.mjs'
 import { dates } from '@pickestry/utils'
+import { SettingsContext } from './SettingsContext.mjs'
 
 export const SettingsProvider = ({ children }) => {
 

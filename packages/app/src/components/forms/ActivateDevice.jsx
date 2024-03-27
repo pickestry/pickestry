@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Form } from '@pickestry/components'
 import { SelectField } from '@pickestry/components'
-import { ctrlInvoker } from '../../common/ctrlInvoker.mjs'
+import { useControl } from '@pickestry/components'
 
 export const ActivateDevice = ({
     id,
@@ -10,6 +10,8 @@ export const ActivateDevice = ({
   }) => {
 
   const [channels, setChannels] = React.useState()
+
+  const ctrlInvoker = useControl()
 
   React.useEffect(() => {
     ctrlInvoker.getAllChannels()

@@ -1,13 +1,16 @@
 import * as React from 'react'
 import { CrudContent } from './CrudContent.jsx'
-import { appInvoker } from '../../common/appInvoker.mjs'
-import { ctrlInvoker } from '../../common/ctrlInvoker.mjs'
+import { useControl } from '../control/index.mjs'
 import { usePage } from '../page/usePage.mjs'
-import * as c from '../../c.mjs'
+import * as c from '../c.mjs'
 
 export const ProductCrudContent = () => {
 
   const { navigate } = usePage()
+
+  const appInvoker = useControl('app')
+
+  const ctrlInvoker = useControl()
 
   const actions = React.useCallback((o) => {
     const _actions = [

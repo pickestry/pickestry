@@ -1,13 +1,13 @@
 import * as React from 'react'
 import styled from 'styled-components'
 import { isFunction } from 'lodash-es'
-import { Panel } from '@pickestry/components'
-import { ListData } from './ListData'
-import { Link } from '../page/Link.jsx'
 import { schema } from '@pickestry/defs'
+import { Panel } from '../panel/index.mjs'
+import { ListData } from './ListData.jsx'
+import { Link } from '../page/Link.jsx'
 import { usePage } from '../page/usePage.mjs'
-import { NotFound } from '../NotFound'
-import { appInvoker } from '../../common/appInvoker.mjs'
+import { NotFound } from '../NotFound.jsx'
+import { useControl } from '../control/index.mjs'
 
 export const CrudContent = ({
   type,
@@ -22,8 +22,11 @@ export const CrudContent = ({
   withBack = false,
   backText = 'Go Back',
   notFoundEl = <NotFound />,
-  onExport
+  onExport,
+  onInit
 }) => {
+
+  const appInvoker = useControl('app')
 
   if(!schema.has(type)) throw new Error(`${type} was not found`)
 
@@ -65,6 +68,10 @@ export const CrudContent = ({
   const finalHint = React.useMemo(() => {
     return hint ? hint : schema.getDescription(type)
   }, [hint, type])
+
+  React.useEffect(() => {
+    onInit?.()
+  }, [])
 
   return (
     <>

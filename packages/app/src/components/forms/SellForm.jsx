@@ -12,18 +12,18 @@ import { TextAreaField } from '@pickestry/components'
 import { SelectField } from '@pickestry/components'
 import { ItemsField } from '@pickestry/components'
 import { useForm } from '@pickestry/components'
+import { DevOnly } from '@pickestry/components'
 import { H } from '@pickestry/components'
 import { DiscountField } from '@pickestry/comviews'
 import { ShippingField } from '@pickestry/comviews'
 import { orderCalculator } from '@pickestry/utils'
 import { enums } from '@pickestry/defs'
 import { displayAmount } from '@pickestry/utils'
-import { ctrlInvoker } from '../../common/ctrlInvoker.mjs'
-import { useSettings } from '../settings/useSettings.mjs'
-import { usePage } from '../page/usePage.mjs'
+import { useControl } from '@pickestry/components'
+import { useSettings } from '@pickestry/components'
+import { usePage } from '@pickestry/components'
 import { useOptSection } from 'hooks/useOptSection.jsx'
 import { produce } from 'immer'
-import { DevOnly } from 'components/DevOnly.jsx'
 
 export const SellForm = ({ entity }) => {
 
@@ -35,6 +35,8 @@ export const SellForm = ({ entity }) => {
   } = useForm()
 
   const { navigate } = usePage()
+
+  const ctrlInvoker = useControl()
 
   const customer = getValue({ name: 'customer' })
 

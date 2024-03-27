@@ -1,13 +1,15 @@
 import * as React from 'react'
 import { Panel } from '@pickestry/components'
 import { Stages } from './stages/Stages'
-import { usePage } from '../page/usePage.mjs'
-import { Link } from '../page/index.mjs'
-import { ctrlInvoker } from '../../common/ctrlInvoker.mjs'
+import { usePage } from '@pickestry/components'
+import { Link } from '@pickestry/components'
+import { useControl } from '@pickestry/components'
 
 export const PipelineView = () => {
 
   const { meta } = usePage()
+
+  const ctrlInvoker = useControl()
 
   const [fetched, setFetched] = React.useState()
 

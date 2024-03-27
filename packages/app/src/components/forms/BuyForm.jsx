@@ -4,6 +4,7 @@ import { get } from 'lodash-es'
 import { omitBy } from 'lodash-es'
 import { isNil } from 'lodash-es'
 import { pick } from 'lodash-es'
+import { produce } from 'immer'
 import { Form } from '@pickestry/components'
 import { EntityField } from '@pickestry/components'
 import { Hr } from '@pickestry/components'
@@ -12,16 +13,15 @@ import { TextAreaField } from '@pickestry/components'
 import { SelectField } from '@pickestry/components'
 import { ItemsField } from '@pickestry/components'
 import { useForm } from '@pickestry/components'
+import { DevOnly } from '@pickestry/components'
 import { H } from '@pickestry/components'
+import { useControl } from '@pickestry/components'
+import { useSettings } from '@pickestry/components'
+import { usePage } from '@pickestry/components'
 import { orderCalculator } from '@pickestry/utils'
 import { enums } from '@pickestry/defs'
 import { displayAmount } from '@pickestry/utils'
-import { ctrlInvoker } from '../../common/ctrlInvoker.mjs'
-import { useSettings } from '../settings/useSettings.mjs'
-import { usePage } from '../page/usePage.mjs'
 import { useOptSection } from 'hooks/useOptSection.jsx'
-import { produce } from 'immer'
-import { DevOnly } from 'components/DevOnly.jsx'
 
 export const BuyForm = ({ entity }) => {
 
@@ -33,6 +33,8 @@ export const BuyForm = ({ entity }) => {
   } = useForm()
 
   const { navigate } = usePage()
+
+  const ctrlInvoker = useControl()
 
   const supplier = getValue({ name: 'supplier' })
 

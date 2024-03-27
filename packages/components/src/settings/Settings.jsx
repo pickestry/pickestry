@@ -2,17 +2,17 @@
 
 import * as React from 'react'
 import styled from 'styled-components'
-import { FormProvider } from '@pickestry/components'
-import { Frame } from '@pickestry/components'
-import { cssPointer } from '@pickestry/components'
+import { FormProvider } from '../form/index.mjs'
+import { Frame } from '../Frame.mjs'
+import { cssPointer } from '../core/index.mjs'
+import { H } from '../layout/index.mjs'
+import { V } from '../layout/index.mjs'
 import { PageProvider } from '../page/PageProvider.jsx'
 import { Render } from '../page/Render.jsx'
 import { Link } from '../page/index.mjs'
 import { LocaleForm } from './LocaleForm.jsx'
 import { AccountForm } from './AccountForm.jsx'
 import { MakeGroup } from './make/MakeGroup.jsx'
-import { H } from '@pickestry/components'
-import { V } from '@pickestry/components'
 import XIcon from 'assets/x.svg'
 
 export const Settings = () => {

@@ -8,10 +8,9 @@ import { Button } from '@pickestry/components'
 import { cssHover } from '@pickestry/components'
 import { H } from '@pickestry/components'
 import { V } from '@pickestry/components'
+import { usePage } from '@pickestry/components'
+import { useControl } from '@pickestry/components'
 import { GoBack } from '../GoBack.jsx'
-import { usePage } from '../page/usePage.mjs'
-import { appInvoker } from '../../common/appInvoker.mjs'
-import { ctrlInvoker } from '../../common/ctrlInvoker.mjs'
 import * as c from '../../c.mjs'
 
 export const PartsView = () => {
@@ -21,6 +20,10 @@ export const PartsView = () => {
   const [refresh, setRefresh] = React.useState()
 
   const { meta } = usePage()
+
+  const appInvoker = useControl('app')
+
+  const ctrlInvoker = useControl()
 
   const id = React.useMemo(()=> meta('id'), [])
 
