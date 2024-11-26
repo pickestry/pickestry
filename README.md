@@ -17,7 +17,7 @@ Pickestry's primary goal is to be simple, robust, and pleasant to use!
 
 ## Showcase
 
-Demonstrating some of the features.
+Here are some of the features,
 
 ### Products
 
